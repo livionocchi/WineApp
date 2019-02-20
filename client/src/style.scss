@@ -1,0 +1,251 @@
+$bgColor: #242529;
+$fontColor: #ffffff; //#675F54;
+$fontColorInv: invert($fontColor, 100); //#675F54;
+$red: #B63753;
+$white: #D3CCA3;
+
+$fontFam: "Montserrat", sans-serif;
+$fontSize: 18px;
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100%;
+  background-color: #fff;
+  font-family: $fontFam;
+  font-size: $fontSize;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+input {
+  box-sizing: border-box;
+  background-color: transparent;
+  text-align: center;
+  font-family: $fontFam;
+  font-size: $fontSize;
+  text-transform: uppercase;
+  border: none;
+  transition: border-color 0.2s;
+  &:focus {
+    outline: none;
+  }
+}
+
+.header {
+  width: 100vw;
+  height: 100px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  padding: 10px 0;
+  #logo {
+    width: 100px;
+    height: 100px;
+    background: url('./images/stain.png') no-repeat center;
+    background-size: contain;
+  }
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-top: 5px;
+  background-color: $bgColor;
+
+  #searchbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+    input {
+      font-size: $fontSize*1.8;
+      color: $fontColor;
+      height: $fontSize*2;
+      transition: border-color 0.2s;
+      &::placeholder {
+        color: opacify($fontColor, 1);
+      }
+    }
+    div {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      #line {
+        width: 300px;
+        height: 1.3px;
+        background-color: $fontColor;
+      }
+    }
+  }
+
+  .wine-list {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: $fontSize*1.8;
+    padding-bottom: 50px;
+    .singleWine {
+      margin: 5px;
+      cursor: pointer;
+    }
+    & :hover {
+      text-decoration: underline;
+    }
+  }
+
+  .wine-details {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    text-align: center;
+    background-color: $fontColor;
+    opacity: .9;
+    color: $fontColorInv;
+    visibility: hidden;
+
+    #close-btn {
+      height: $fontSize;
+      float: right;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .wine-info {
+      margin: 30px 0;
+      #wine-name {
+        font-size: $fontSize * 1.3;
+      }
+    }
+
+    form {
+      min-height: 150px;
+      #inputs {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .field {
+          input {
+            width: 225px;
+          }
+          div {
+            width: 100%;
+            #line {
+              width: 200px;
+              height: 1.3px;
+              background-color: $fontColorInv;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .visible {
+    visibility: visible;
+    overflow: scroll;
+  }
+
+  .bkgred {
+    padding: 10px 0;
+    background-color: $red;
+    min-height: 250px;
+    #bottles {
+      background-color: lighten($red, 20);
+    }
+  }
+
+  .bkgwhite {
+    padding: 10px 0;
+    background-color: $white;
+    min-height: 250px;
+    #bottles {
+      background-color: darken($white, 20);
+    }
+  }
+
+  #bottles-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: left;
+    #bottles {
+      width: 250px;
+      height: 180px;
+      margin: 10px;
+      padding: 10px;
+    }
+  }
+
+  .red {
+    color: $red;
+  }
+
+  .white {
+    color: $white;
+  }
+}
+
+
+
+.tools {
+  display: flex;
+  flex-direction: row;
+  background-color: $bgColor;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+
+  .toolIcon {
+    width: 30px;
+    margin-bottom: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+  }
+
+  :nth-child(1) {
+    background-image: url('./images/graphql.png');
+  }
+  :nth-child(2) {
+    background-image: url('./images/mongo.png');
+    width: 45px;
+  }
+  :nth-child(3) {
+    background-image: url('./images/react.png');
+    width: 39px;
+  }
+  :nth-child(4) {
+    background-image: url('./images/node.png');
+  }
+}

@@ -1,0 +1,226 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100%;
+  background-color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+input {
+  box-sizing: border-box;
+  background-color: transparent;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: none;
+  transition: border-color 0.2s;
+}
+input:focus {
+  outline: none;
+}
+
+.header {
+  width: 100vw;
+  height: 100px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  padding: 10px 0;
+}
+.header #logo {
+  width: 100px;
+  height: 100px;
+  background: url("./images/stain.png") no-repeat center;
+  background-size: contain;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-top: 5px;
+  background-color: #242529;
+}
+#root #searchbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 40px;
+}
+#root #searchbar input {
+  font-size: 32.4px;
+  color: #ffffff;
+  height: 36px;
+  transition: border-color 0.2s;
+}
+#root #searchbar input::placeholder {
+  color: white;
+}
+#root #searchbar div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#root #searchbar div #line {
+  width: 300px;
+  height: 1.3px;
+  background-color: #ffffff;
+}
+#root .wine-list {
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 32.4px;
+  padding-bottom: 50px;
+}
+#root .wine-list .singleWine {
+  margin: 5px;
+  cursor: pointer;
+}
+#root .wine-list :hover {
+  text-decoration: underline;
+}
+#root .wine-details {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  text-align: center;
+  background-color: #ffffff;
+  opacity: 0.9;
+  color: black;
+  visibility: hidden;
+}
+#root .wine-details #close-btn {
+  height: 18px;
+  float: right;
+  cursor: pointer;
+}
+#root .wine-details #close-btn:hover {
+  text-decoration: underline;
+}
+#root .wine-details .wine-info {
+  margin: 30px 0;
+}
+#root .wine-details .wine-info #wine-name {
+  font-size: 23.4px;
+}
+#root .wine-details form {
+  min-height: 150px;
+}
+#root .wine-details form #inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#root .wine-details form #inputs .field input {
+  width: 225px;
+}
+#root .wine-details form #inputs .field div {
+  width: 100%;
+}
+#root .wine-details form #inputs .field div #line {
+  width: 200px;
+  height: 1.3px;
+  background-color: black;
+}
+#root .visible {
+  visibility: visible;
+  overflow: scroll;
+}
+#root .bkgred {
+  padding: 10px 0;
+  background-color: #B63753;
+  min-height: 250px;
+}
+#root .bkgred #bottles {
+  background-color: #d77c90;
+}
+#root .bkgwhite {
+  padding: 10px 0;
+  background-color: #D3CCA3;
+  min-height: 250px;
+}
+#root .bkgwhite #bottles {
+  background-color: #b2a65e;
+}
+#root #bottles-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: left;
+}
+#root #bottles-list #bottles {
+  width: 250px;
+  height: 180px;
+  margin: 10px;
+  padding: 10px;
+}
+#root .red {
+  color: #B63753;
+}
+#root .white {
+  color: #D3CCA3;
+}
+
+.tools {
+  display: flex;
+  flex-direction: row;
+  background-color: #242529;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
+.tools .toolIcon {
+  width: 30px;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+.tools :nth-child(1) {
+  background-image: url("./images/graphql.png");
+}
+.tools :nth-child(2) {
+  background-image: url("./images/mongo.png");
+  width: 45px;
+}
+.tools :nth-child(3) {
+  background-image: url("./images/react.png");
+  width: 39px;
+}
+.tools :nth-child(4) {
+  background-image: url("./images/node.png");
+}
+
+/*# sourceMappingURL=index.css.map */
