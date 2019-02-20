@@ -9,8 +9,6 @@ class AddWine extends Component {
     region: ""
   }
 
-  b
-
   handleChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value

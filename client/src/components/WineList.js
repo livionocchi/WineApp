@@ -92,9 +92,9 @@ class WineList extends Component {
         </ul>
         <div className={ wineDets.join(' ') }  >
           <div id="close-btn" onClick={ this.getWineId }>close</div>
-          <WineDetails wineId={this.state.wineId} />
+          <WineDetails wineId={ this.state.wineId } />
           <p>add a new bottle</p>
-          <AddBottle wineId={this.state.wineId} />
+          <AddBottle wineId={ this.state.wineId } />
         </div>
       </div>
     );

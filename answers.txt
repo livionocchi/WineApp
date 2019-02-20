@@ -1,0 +1,48 @@
+- What is the problem you are trying to solve?
+
+I want people to have a place where to store their favourite bottles of wine
+
+- Who is your target audience?
+
+Everyone who is keen on wine
+
+- What are your specific goals?
+
+As above
+
+- What is your business model? Where is your revenue coming from?
+
+Advertisements on the page 
+
+- What are the costs of your business?
+
+Pretty low, just making sure the database is well populated
+
+- Who is your current competition?
+
+Vivino is the major competitor
+
+- How is your product different from currently available competitors?
+
+Is more minimalistic and straight to the point
+
+- What is the current supply / demand for your product?
+
+Studies suggest high usage in wine application 
+
+- What data will you need to store? How will it be organized? Describe each table, its columns, and its relationships with other tables.
+
+A table which stores all the wines’ info and another to store the bottles’ ones
+
+- What does your product look like? List each view, their purpose, and how they work
+
+It’s a single page app on which everything happens
+
+- Describe any complex business logic that is happening in your application. For example, how does data flow through your application
+
+Nothing too complex for a 3 months newbie developer
+
+Have a timeline of milestones to reach, including deadlines:
+
+See Trello board
+
